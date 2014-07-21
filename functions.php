@@ -51,7 +51,7 @@ function get_meta_value($key, $type = '', $value_wrapper = 'span')
     } elseif ($type == 'price') {
         $classes[] = preg_match('/free/i', $value) ? 'passed' : 'failed';
     } elseif ($type == 'url') {
-        if (preg_match('/^http:\/\//i', $value)) {
+        if (preg_match('/^https?:\/\//i', $value)) {
             $value = ' - <a href="' . $value . '" target="_blank">link</a>';
         } else {
             $value = 'No';
