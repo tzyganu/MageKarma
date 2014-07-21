@@ -11,7 +11,7 @@ code { background: #eeeeee; padding: 1px 5px }
 
 /* Header */
 .header { margin: 63px 0 87px 0 }
-.header .logo { display: block; width: 122px; height: 100px; background: url('images/logo.png'); text-transform: uppercase; color: #4a4a4a; text-decoration: none; font-size: 23px; padding: 50px 0 0 28px }
+.header .logo { display: block; width: 122px; height: 100px; background-color: #ffffff; border-radius: 75px; text-transform: uppercase; color: #4a4a4a; text-decoration: none; font-size: 23px; padding: 50px 0 0 28px }
 .header .logo strong { display: block; font-family: GothamHTF-Bold, sans-serif }
 .header h1 { margin: 64px 0 0 48px; color: #ffffff; font-size: 20px; font-family: GothamHTF-XLight, sans-serif; font-weight: normal }
 .menu-container { margin-top: 60px; position: relative }
