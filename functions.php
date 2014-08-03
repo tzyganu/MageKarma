@@ -70,3 +70,16 @@ function get_meta_value($key, $type = '', $value_wrapper = 'span', $display_labe
 
     return ($display_label ? $key . ': ' : '') . '<' . $value_wrapper . (empty($classes) ? '' : ' class="' . implode(' ', $classes) . '"') . '>' . $value . '</' . $value_wrapper . '>';
 }
+
+/**
+ * Search through reviews only
+ */
+add_filter( 'pre_get_posts', function($query) {
+
+    /** @var WP_Query $query */
+    if ($query->is_search) {
+        $query->set( 'post_type', 'post' );
+    }
+
+    return $query;
+});

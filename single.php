@@ -75,6 +75,7 @@
         <?php endif ?>
 
     </div>
-    <a href="<?php echo home_url('/') ?>" class="back-link">Back to main search</a>
+
+    <a href="<?php echo home_url('/') ?>" class="back-link">Back to search</a>
 
 <?php get_footer() ?>
