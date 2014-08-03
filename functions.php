@@ -33,7 +33,7 @@ add_action( 'init', function() {
     register_nav_menu( 'menu', __( 'Main Navigation' ) );
 } );
 
-function get_meta_value($key, $type = '', $value_wrapper = 'span')
+function get_meta_value($key, $type = '', $value_wrapper = 'span', $display_label = true)
 {
     $value = trim(get_post_meta(get_the_ID(), $key, true));
     $classes = array();
@@ -68,5 +68,5 @@ function get_meta_value($key, $type = '', $value_wrapper = 'span')
         $value = '-';
     }
 
-    return $key . ': <' . $value_wrapper . (empty($classes) ? '' : ' class="' . implode(' ', $classes) . '"') . '>' . $value . '</' . $value_wrapper . '>';
+    return ($display_label ? $key . ': ' : '') . '<' . $value_wrapper . (empty($classes) ? '' : ' class="' . implode(' ', $classes) . '"') . '>' . $value . '</' . $value_wrapper . '>';
 }
