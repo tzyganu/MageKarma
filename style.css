@@ -33,7 +33,7 @@ code { background: #eeeeee; padding: 1px 5px }
 .stats-area ul { float: left; width: 50%; margin: 0; padding: 0; list-style: none }
 .stats-area ul li { margin-bottom: 8px }
 .stats-area .score { font-size: 18px; margin: 5px 0 20px }
-.stats-area .score span { color: #f49d00; font-weight: bold }
+.stats-area .score span { font-weight: bold }
 .author-area > .left { width: 50% }
 .author-area .bio > strong { display: block; margin: 7px 0 }
 .author-area .bio { width: 245px; }
@@ -52,6 +52,7 @@ code { background: #eeeeee; padding: 1px 5px }
 .excellent { color: #6fb353 }
 .very_good, .passed { color: #24890d }
 .poor, .failed, .low { color: #f04040 }
+.average { color: #f49d00 }
 
 /* Home */
 .search-form { position: relative }
