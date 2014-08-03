@@ -68,7 +68,7 @@ code { background: #eeeeee; padding: 1px 5px }
 .home-content .block-top, .home-content .block-tags { padding-left: 20px }
 .home-content .block-recent li, .home-content .block-top li { padding: 5px 10px; font-size: 12px }
 .home-content .block-recent li:nth-child(odd), .home-content .block-top li:nth-child(odd) { background-color: #f2f2f2 }
-.home-content .block-tags a { display: inline-block; background-color: #4b4b4b; border-radius: 3px; padding: 5px 10px; color: #ffffff; text-decoration: none }
+.home-content .block-tags a { display: inline-block; background-color: #4b4b4b; border-radius: 3px; padding: 5px 10px; color: #ffffff; text-decoration: none; margin-bottom: 5px }
 .home-content .block-tags a:hover { background-color: #f49d00 }
 .home-content .block-reviewers .text { padding-top: 12px }
 .home-content h2 { font-size: 24px; border-bottom: 2px #5e5d5d solid; font-weight: normal }
@@ -85,7 +85,7 @@ code { background: #eeeeee; padding: 1px 5px }
 .footer li a:hover { text-decoration: underline }
 
 /* Clearer */
-.header:after, .author-area:after, .author-area > .left:after, .stats-area:after, .comment-body:after,
+.clearer, .header:after, .author-area:after, .author-area > .left:after, .stats-area:after, .comment-body:after,
 .home-content:after, .home-content li:after { content: ""; display: block; height: 0; clear: both; visibility: hidden }
 
 /* Media queries */
@@ -108,7 +108,6 @@ code { background: #eeeeee; padding: 1px 5px }
     .author-area .bio { width: 230px }
     .home-block { float: none; width: auto }
     .home-content .block-recent, .home-content .block-reviewers, .home-content .block-top, .home-content .block-tags { padding: 0 }
-
 }
 
 @media ( max-width: 767px ) {

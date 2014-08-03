@@ -58,6 +58,8 @@
         <?php endif ?>
         <?php wp_reset_query() ?>
 
+        <div class="clearer"></div>
+
         <?php
         /**
          * Top reviewers
