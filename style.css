@@ -77,6 +77,11 @@ code { background: #eeeeee; padding: 1px 5px }
 .search-result { margin-bottom: 25px }
 .search-result a { font-size: 32px }
 
+/* Author archive */
+.author-content .page-title { border-bottom: #979797 solid 1px; padding-bottom: 20px; margin-bottom: 25px }
+.author-content .page-title h2 { border: none; margin: 0; padding-bottom: 3px }
+.author-content h3 { font-size: 24px }
+
 /* Footer */
 .footer { background-color: #292f33; border-top-left-radius: 5px; border-top-right-radius: 5px; margin-top: 50px; text-align: right; padding: 30px }
 .footer ul { margin: 0 }
@@ -86,7 +91,7 @@ code { background: #eeeeee; padding: 1px 5px }
 
 /* Clearer */
 .clearer, .header:after, .author-area:after, .author-area > .left:after, .stats-area:after, .comment-body:after,
-.home-content:after, .home-content li:after { content: ""; display: block; height: 0; clear: both; visibility: hidden }
+.home-content:after, .home-content li:after, .author-content .page-title:after { content: ""; display: block; height: 0; clear: both; visibility: hidden }
 
 /* Media queries */
 @media ( max-width: 2499px ) {
