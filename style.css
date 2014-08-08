@@ -94,6 +94,7 @@ code { background: #eeeeee; padding: 1px 5px }
 .login #backtoblog a, .login #nav a { color: #FFFFFF }
 .wp-core-ui .button.button-large { background: #f49d00; border: none; box-shadow: none }
 .login .message { border-color: #f49d00 }
+.login h1 { display: none }
 
 /* Clearer */
 .clearer, .header:after, .author-area:after, .author-area > .left:after, .stats-area:after, .comment-body:after,
