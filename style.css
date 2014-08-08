@@ -89,6 +89,12 @@ code { background: #eeeeee; padding: 1px 5px }
 .footer li a { color: #ffffff; text-decoration: none }
 .footer li a:hover { text-decoration: underline }
 
+/* Login/registration */
+.login form { border-radius: 5px }
+.login #backtoblog a, .login #nav a { color: #FFFFFF }
+.wp-core-ui .button.button-large { background: #f49d00; border: none; box-shadow: none }
+.login .message { border-color: #f49d00 }
+
 /* Clearer */
 .clearer, .header:after, .author-area:after, .author-area > .left:after, .stats-area:after, .comment-body:after,
 .home-content:after, .home-content li:after, .author-content .page-title:after { content: ""; display: block; height: 0; clear: both; visibility: hidden }

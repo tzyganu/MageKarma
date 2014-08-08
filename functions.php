@@ -83,3 +83,17 @@ add_filter( 'pre_get_posts', function($query) {
 
     return $query;
 });
+
+/**
+ * Add theme CSS file to login/registration page
+ */
+add_action( 'login_enqueue_scripts', function() {
+    wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/style.css' );
+} );
+
+/**
+ * Void registration page message
+ */
+add_filter( 'login_message', function($message) {
+    return $message == '<p class="message register">' . __('Register For This Site') . '</p>' ? '' : $message;
+});
