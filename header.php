@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title><?php wp_title( '-', true, 'right') ?><?php bloginfo('title') ?> - <?php bloginfo('description') ?></title>
     <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
     <script type="text/javascript" src="<?php bloginfo('template_directory') ?>/js/common.js"></script>
