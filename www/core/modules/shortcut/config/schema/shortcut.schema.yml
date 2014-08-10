@@ -1,0 +1,12 @@
+# Schema for the configuration files of the Shortcut module.
+
+shortcut.set.*:
+  type: config_entity
+  label: 'Shortcut settings'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'

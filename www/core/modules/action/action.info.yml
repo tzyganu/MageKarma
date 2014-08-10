@@ -1,0 +1,13 @@
+name: Actions
+type: module
+description: 'Perform tasks on specific events triggered within the system.'
+package: Core
+# version: VERSION
+# core: 8.x
+configure: action.admin
+
+# Information added by Drupal.org packaging script on 2014-08-06
+version: '8.0.0-alpha14'
+core: '8.x'
+project: 'drupal'
+datestamp: 1407344630

@@ -1,0 +1,152 @@
+# Schema for the configuration files of the Options module.
+
+field.list_integer.settings:
+  type: mapping
+  label: 'List (integer) settings'
+  mapping:
+    allowed_values:
+      type: sequence
+      label: 'Allowed values list'
+      sequence:
+        - type: mapping
+          label: 'Allowed value with label'
+          mapping:
+            value:
+              type: integer
+              label: 'Value'
+            label:
+              type: label
+              label: 'Label'
+    allowed_values_function:
+      type: string
+      label: 'Allowed values function'
+
+field.list_integer.instance_settings:
+  label: 'List (integer)'
+  type: mapping
+  mapping: {  }
+
+field.list_integer.value:
+  type: sequence
+  label: 'Default value'
+  sequence:
+    - type: mapping
+      label: 'Default'
+      mapping:
+        value:
+          type: integer
+          label: 'Value'
+
+field.list_float.settings:
+  type: mapping
+  label: 'List (float) settings'
+  mapping:
+    allowed_values:
+      type: sequence
+      label: 'Allowed values list'
+      sequence:
+        - type: mapping
+          label: 'Allowed value with label'
+          mapping:
+            value:
+              type: float
+              label: 'Value'
+            label:
+              type: label
+              label: 'Label'
+    allowed_values_function:
+      type: string
+      label: 'Allowed values function'
+
+field.list_float.instance_settings:
+  label: 'List (float)'
+  type: mapping
+  mapping: {  }
+
+field.list_float.value:
+  type: sequence
+  label: 'Default value'
+  sequence:
+    - type: mapping
+      label: 'Default'
+      mapping:
+        value:
+          type: string
+          label: 'Value'
+
+field.list_text.settings:
+  type: mapping
+  label: 'List (text) settings'
+  mapping:
+    allowed_values:
+      type: sequence
+      label: 'Allowed values list'
+      sequence:
+        - type: mapping
+          label: 'Allowed value with label'
+          mapping:
+            value:
+              type: string
+              label: 'Value'
+            label:
+              type: label
+              label: 'Label'
+    allowed_values_function:
+      type: string
+      label: 'Allowed values function'
+
+field.list_text.instance_settings:
+  label: 'List (float)'
+  type: mapping
+  mapping: {  }
+
+field.list_text.value:
+  type: sequence
+  label: 'Default value'
+  sequence:
+    - type: mapping
+      label: 'Default'
+      mapping:
+        value:
+          type: string
+          label: 'Value'
+
+entity_view_display.field.list_default:
+  type: entity_field_view_display_base
+  label: 'Options list default display settings'
+  mapping:
+    settings:
+      type: sequence
+      label: 'Settings'
+      sequence:
+        - type: string
+
+entity_view_display.field.list_key:
+  type: entity_field_view_display_base
+  label: 'Key format settings'
+  mapping:
+    settings:
+      type: sequence
+      label: 'Settings'
+      sequence:
+        - type: string
+
+entity_form_display.field.options_buttons:
+  type: entity_field_form_display_base
+  label: 'Check boxes/radio buttons format settings'
+  mapping:
+    settings:
+      type: sequence
+      label: 'Settings'
+      sequence:
+        - type: string
+
+entity_form_display.field.options_select:
+  type: entity_field_form_display_base
+  label: 'Select list format settings'
+  mapping:
+    settings:
+      type: sequence
+      label: 'Settings'
+      sequence:
+        - type: string

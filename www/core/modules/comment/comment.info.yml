@@ -1,0 +1,16 @@
+name: Comment
+type: module
+description: 'Allows users to comment on and discuss published content.'
+package: Core
+# version: VERSION
+# core: 8.x
+dependencies:
+  - datetime
+  - text
+configure: comment.admin
+
+# Information added by Drupal.org packaging script on 2014-08-06
+version: '8.0.0-alpha14'
+core: '8.x'
+project: 'drupal'
+datestamp: 1407344630
