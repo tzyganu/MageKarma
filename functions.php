@@ -17,6 +17,13 @@ add_action( 'init', function() {
     $labels->all_items = 'All Reviews';
     $labels->menu_name = 'Reviews';
     $labels->name_admin_bar = 'Reviews';
+
+    /* If user clicks to dismiss reviewer guidelines notice add it to user meta */
+    global $current_user;
+    if ( isset($_GET['dismiss_guidelines']) && '0' == $_GET['dismiss_guidelines'] ) {
+        add_user_meta( $current_user->ID, 'reviewer_guidelines_read', 'true', true );
+    }
+
 } );
 
 add_action( 'admin_menu', function() {
@@ -96,4 +103,19 @@ add_action( 'login_enqueue_scripts', function() {
  */
 add_filter( 'login_message', function($message) {
     return $message == '<p class="message register">' . __('Register For This Site') . '</p>' ? '' : $message;
+});
+
+/**
+ * Display the reviewer guidelines notice if not dismissed before
+ */
+add_action( 'admin_notices', function() {
+    global $current_user ;
+    $user_id = $current_user->ID;
+
+    /* Check that the user hasn't already clicked to ignore the message */
+    if ( ! get_user_meta($user_id, 'reviewer_guidelines_read') ) {
+        echo '<div class="updated"><p>';
+        _e('Not sure there to start? There\'s a <a href="https://github.com/tim-bezhashvyly/MageKarma/wiki/Reviewers-Guidelines" target="_blank">Reviewer Guideline</a>. | <a href="?dismiss_guidelines=0">Hide</a>');
+        echo "</p></div>";
+    }
 });
