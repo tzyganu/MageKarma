@@ -1,0 +1,57 @@
+devel.devel_node_tab:
+  route_name: devel.devel_node_load
+  title: 'Devel'
+  base_route: node.view
+  weight: 100
+devel.devel_node_load_tab:
+  route_name: devel.devel_node_load
+  title: 'Load'
+  parent_id: devel.devel_node_tab
+devel.devel_node_render_tab:
+  route_name: devel.devel_node_render
+  title: 'Render'
+  parent_id: devel.devel_node_tab
+  weight: 100
+devel.devel_comment_tab:
+  route_name: devel.devel_comment_load
+  title: 'Devel'
+  base_route: comment.permalink
+  weight: 100
+devel.devel_comment_load_tab:
+  route_name: devel.devel_comment_load
+  title: 'Load'
+  parent_id: devel.devel_comment_tab
+devel.devel_comment_render_tab:
+  route_name: devel.devel_comment_render
+  title: 'Render'
+  parent_id: devel.devel_comment_tab
+  weight: 100
+devel.devel_user_tab:
+  route_name: devel.devel_user_load
+  title: 'Devel'
+  base_route: user.view
+  weight: 100
+devel.devel_user_load_tab:
+  route_name: devel.devel_user_load
+  title: 'Load'
+  parent_id: devel.devel_user_tab
+devel.devel_user_render_tab:
+  route_name: devel.devel_user_render
+  title: 'Render'
+  parent_id: devel.devel_user_tab
+  weight: 100
+devel.devel_taxonomy_term_tab:
+  route_name: devel.devel_taxonomy_term_load
+  title: 'Devel'
+  base_route: taxonomy.term_page
+  weight: 100
+devel.devel_taxonomy_term_load_tab:
+  route_name: devel.devel_taxonomy_term_load
+  title: 'Load'
+  parent_id: devel.devel_taxonomy_term_tab
+  weight: -10
+devel.devel_taxonomy_term_render_tab:
+  route_name: devel.devel_taxonomy_term_render
+  title: 'Render'
+  parent_id: devel.devel_taxonomy_term_tab
+  weight: 100

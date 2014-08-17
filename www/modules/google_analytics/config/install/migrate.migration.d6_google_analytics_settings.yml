@@ -1,0 +1,62 @@
+id: d6_google_analytics_settings
+source:
+  plugin: variable
+  variables:
+    - googleanalytics_account
+    - googleanalytics_cache
+    - googleanalytics_codesnippet_create
+    - googleanalytics_codesnippet_before
+    - googleanalytics_codesnippet_after
+    - googleanalytics_cross_domains
+    - googleanalytics_custom_dimension
+    - googleanalytics_custom_metric
+    - googleanalytics_domain_mode
+    - googleanalytics_pages
+    - googleanalytics_roles
+    - googleanalytics_site_search
+    - googleanalytics_trackadsense
+    - googleanalytics_trackdoubleclick
+    - googleanalytics_trackmessages
+    - googleanalytics_tracker_anonymizeip
+    - googleanalytics_trackfiles
+    - googleanalytics_trackfiles_extensions
+    - googleanalytics_tracklinkid
+    - googleanalytics_trackurlfragments
+    - google_analytics_trackuserid
+    - googleanalytics_trackmailto
+    - googleanalytics_trackoutgoing
+    - googleanalytics_translation_set
+    - googleanalytics_visibility
+    - googleanalytics_visibility_roles
+    - googleanalytics_privacy_donottrack
+process:
+  account: googleanalytics_account
+  cache: googleanalytics_cache
+  'codesnippet:create': googleanalytics_codesnippet_create
+  'codesnippet:before': googleanalytics_codesnippet_before
+  'codesnippet:after': googleanalytics_codesnippet_after
+  cross_domains: googleanalytics_cross_domains
+  'custom:dimension': googleanalytics_custom_dimension
+  'custom:metric': googleanalytics_custom_metric
+  domain_mode: googleanalytics_domain_mode
+  'visibility:pages': googleanalytics_pages
+  'visibility:roles': googleanalytics_roles
+  'track:site_search': googleanalytics_site_search
+  'track:adsense': googleanalytics_trackadsense
+  'track:displayfeatures': googleanalytics_trackdoubleclick
+  'track:messages': googleanalytics_trackmessages
+  'privacy:anonymizeip': googleanalytics_tracker_anonymizeip
+  'track:files': googleanalytics_trackfiles
+  'track:files_extensions': googleanalytics_trackfiles_extensions
+  'track:linkid': googleanalytics_tracklinkid
+  'track:urlfragments': googleanalytics_trackurlfragments
+  'track:userid': googleanalytics_trackuserid
+  'track:mailto': googleanalytics_trackmailto
+  'track:outbound': googleanalytics_trackoutgoing
+  'translation_set': googleanalytics_translation_set
+  'visibility:pages_enabled': googleanalytics_visibility
+  'visibility:roles_enabled': googleanalytics_visibility_roles
+  'privacy.donottrack': googleanalytics_privacy_donottrack
+destination:
+  plugin: d8_config
+  config_name: google_analytics.settings

@@ -1,0 +1,17 @@
+google_analytics:
+  version: VERSION
+  js:
+    google_analytics.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+google_analytics_debug:
+  version: VERSION
+  js:
+    google_analytics_debug.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

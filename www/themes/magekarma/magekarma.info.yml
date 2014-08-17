@@ -1,0 +1,20 @@
+name: magekarma
+type: theme
+description: Drupal 8 Theme
+version: 1.0
+core: 8.x
+engine: twig
+screenshot: img/screenshot.png
+
+stylesheets:
+  all:
+  - css/style.css
+
+# Remove a CSS file:
+stylesheets-remove:
+  - normalize.css
+
+regions:
+  content: 'Content'
+  sidebar: 'Sidebar'
+  footer: 'Footer'

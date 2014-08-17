@@ -1,0 +1,12 @@
+services:
+  devel.event_subscriber:
+    class: Drupal\devel\EventSubscriber\DevelEventSubscriber
+    arguments: ['@config.factory', '@current_user', '@module_handler']
+    tags:
+      - { name: event_subscriber }
+
+  access_check.switch_user:
+    class: Drupal\devel\Access\SwitchAccess
+    arguments: ['@csrf_token']
+    tags:
+      - { name: access_check }

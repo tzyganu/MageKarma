@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_uninstall().
+ */
+function devel_uninstall() {
+  // Delete the development menu.
+  if (\Drupal::moduleHandler()->moduleExists('menu')) {
+    if ($devel_menu = menu_load('devel')) {
+      $devel_menu->delete();
+    }
+  }
+}
+

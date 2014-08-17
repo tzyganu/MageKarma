@@ -1,0 +1,9 @@
+# Schema for the configuration files of the Devel generate module.
+
+devel_generate.settings:
+  type: mapping
+  label: 'Devel generate settings'
+  mapping:
+    image_function:
+      type: string
+      label: 'Image generation function name'

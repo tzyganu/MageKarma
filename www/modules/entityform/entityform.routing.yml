@@ -1,0 +1,36 @@
+entityform.submit:
+  path: '/entityform/submit/{entityform_type}'
+  defaults:
+    _entity_form: 'entityform_submission.add'
+  requirements:
+      _permission: 'administer entityform types'
+entityform.overview_types:
+  path: '/admin/structure/entityform-types'
+  defaults:
+    _content: '\Drupal\Core\Entity\Controller\EntityListController::listing'
+    entity_type: 'entityform_type'
+    _title: 'Entityform types'
+  requirements:
+    _permission: 'administer entityform types'
+
+entityform.type_add:
+  path: '/admin/structure/entityform-types/add'
+  defaults:
+    _entity_form: 'entityform_type.add'
+  requirements:
+    _permission: 'administer entityform types'
+
+entityform.type_edit:
+  path: '/admin/structure/entityform-types/manage/{entityform_type}'
+  defaults:
+    _entity_form: 'entityform_type.edit'
+  requirements:
+    _permission: 'administer entityform types'
+
+entityform.type_delete_confirm:
+  path: '/admin/structure/entityform-types/manage/{entityform_type}/delete'
+  defaults:
+    _entity_form: 'entityform_type.delete'
+    _title: 'Delete'
+  requirements:
+    _entity_access: 'entityform_type.delete'

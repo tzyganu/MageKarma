@@ -1,0 +1,100 @@
+<?php
+/**
+ * Implements hook_schema().
+ */
+function entityform_schema() {
+  $schema['entityform_submission'] = array(
+    'description' => 'The base table for entityform submissions.',
+    'fields' => array(
+      'eid' => array(
+        'description' => 'The primary identifier for a entityform submission.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'uuid' => array(
+        'description' => 'Unique Key: Universally unique identifier for this entity.',
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => FALSE,
+      ),
+// Defaults to NULL in order to avoid a brief period of potential
+// deadlocks on the index.
+      'vid' => array(
+        //'description' => 'The current {entityform__field_revision}.vid version identifier.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+        'default' => NULL,
+      ),
+      'type' => array(
+        'description' => 'The type of this entityform submission.',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+    ),
+    'indexes' => array(
+      'entityform_type' => array(array('type', 4)),
+    ),
+    'unique keys' => array(
+      'vid' => array('vid'),
+      'uuid' => array('uuid'),
+    ),
+    'foreign keys' => array(
+      'entityform_submission_revision' => array(
+        'table' => 'entityform_submission_revision',
+        'columns' => array('vid' => 'vid'),
+      ),
+    ),
+    'primary key' => array('eid'),
+  );
+
+  $schema['entityform_submission_revision'] = array(
+    'description' => 'Stores information about each saved version of a {entityform_submission}.',
+    'fields' => array(
+      'eid' => array(
+        'description' => 'The {entityform_submission} this version belongs to.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'vid' => array(
+        'description' => 'The primary identifier for this version.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'revision_uid' => array(
+        'description' => 'The {users}.uid that created this version.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'revision_timestamp' => array(
+        'description' => 'The Unix timestamp when the version was created.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'indexes' => array(
+      'eid' => array('eid'),
+      'revision_uid' => array('revision_uid'),
+    ),
+    'foreign keys' => array(
+      'versioned_entityform_submission' => array(
+        'table' => 'entityform_submission',
+        'columns' => array('eid' => 'eid'),
+      ),
+      'version_author' => array(
+        'table' => 'users',
+        'columns' => array('revision_uid' => 'uid'),
+      ),
+    ),
+    'primary key' => array('vid'),
+  );
+  return $schema;
+}
