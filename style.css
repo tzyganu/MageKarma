@@ -21,6 +21,7 @@ code { background: #eeeeee; padding: 1px 5px }
 .menu-container ul li { padding-bottom: 15px }
 .menu-container ul li a { color: #5d5d5d; display: block; text-decoration: none }
 .menu-container ul li a:hover { text-decoration: underline }
+#header-menu { z-index: 70 }
 
 /* Content */
 .content, .home-content { background-color: #ffffff; border-radius: 5px; padding: 40px }
