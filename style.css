@@ -12,7 +12,7 @@ code { background: #eeeeee; padding: 1px 5px }
 .main-container { margin: 0 auto; width: 890px }
 
 /* Header */
-.header { margin: 63px 0 87px 0 }
+.header { margin: 40px 0 55px 0 }
 .header .logo { display: block; width: 122px; height: 100px; background-color: #ffffff; border-radius: 75px; text-transform: uppercase; color: #5d5d5d; text-decoration: none; font-size: 23px; padding: 50px 0 0 28px; line-height: 26px }
 .header .logo strong { display: block }
 .header h1 { margin: 64px 0 0 48px; color: #ffffff; font-size: 20px; font-weight: normal }
