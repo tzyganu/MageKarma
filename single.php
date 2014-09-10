@@ -19,6 +19,7 @@
                     </ul>
                     <ul>
                         <li><?php echo get_meta_value('MagentoConnect', 'url') ?></li>
+                        <li><?php echo get_meta_value('NR Apps Store', 'url') ?></li>
                         <li><?php echo get_meta_value('Modman', 'yes-no') ?></li>
                         <li><?php echo get_meta_value('Composer', 'yes-no') ?></li>
                         <li><?php echo get_meta_value('GitHub', 'url') ?></li>
