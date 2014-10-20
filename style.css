@@ -57,9 +57,9 @@ code { background: #eeeeee; padding: 1px 5px }
 
 /* Scores */
 .excellent { color: #6fb353 }
-.very_good, .passed { color: #24890d }
-.poor, .failed, .low { color: #f04040 }
-.average { color: #f49d00 }
+.very_good, .good, .passed { color: #24890d }
+.poor, .failed, .disappointing { color: #f04040 }
+.questionable { color: #f49d00 }
 
 /* Home */
 .search-form { position: relative }
